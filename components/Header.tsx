@@ -67,62 +67,92 @@ export default function Header() {
             onClick={() => setOpen(true)}
             className="md:hidden"
           >
-            <Menu size={24} strokeWidth={1.5} />
+            <Menu size={26} strokeWidth={1.5} />
           </button>
         </div>
       </div>
 
-      {/* MENU MOBILE FULLSCREEN */}
+      {/* MENU MOBILE PREMIUM */}
       {open && (
-        <div className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center space-y-10 text-lg tracking-widest">
+        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center text-white">
 
           {/* BOTÃO FECHAR */}
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-6 right-6"
+            className="absolute top-8 right-8 hover:text-[#C6A75E] transition"
           >
-            <X size={28} strokeWidth={1.5} />
+            <X size={30} strokeWidth={1.5} />
           </button>
 
-          <Link href="/vestidos/casamento" onClick={() => setOpen(false)}>
-            CASAMENTO
-          </Link>
+          {/* LINKS */}
+          <div className="flex flex-col items-center space-y-8 text-2xl tracking-[0.3em] font-light">
 
-          <Link href="/vestidos/debutantes" onClick={() => setOpen(false)}>
-            DEBUTANTES
-          </Link>
-
-          <Link href="/vestidos/madrinhas" onClick={() => setOpen(false)}>
-            MADRINHAS
-          </Link>
-
-          <Link href="/vestidos/festa" onClick={() => setOpen(false)}>
-            FESTA
-          </Link>
-
-          <Link href="/vestidos/daminhas" onClick={() => setOpen(false)}>
-            DAMINHAS
-          </Link>
-
-          {/* SOCIAL MOBILE */}
-          <div className="flex space-x-8 pt-8 border-t border-white/20">
-            <a
-              href="https://wa.me/5562993347287?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20da%20Venute%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/vestidos/casamento"
               onClick={() => setOpen(false)}
+              className="hover:text-[#C6A75E] transition duration-500"
             >
-              <MessageCircle size={22} strokeWidth={1.5} />
-            </a>
+              CASAMENTO
+            </Link>
 
-            <a
-              href="https://www.instagram.com/venute_locacoes"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/vestidos/debutantes"
               onClick={() => setOpen(false)}
+              className="hover:text-[#C6A75E] transition duration-500"
             >
-              <Instagram size={22} strokeWidth={1.5} />
-            </a>
+              DEBUTANTES
+            </Link>
+
+            <Link
+              href="/vestidos/madrinhas"
+              onClick={() => setOpen(false)}
+              className="hover:text-[#C6A75E] transition duration-500"
+            >
+              MADRINHAS
+            </Link>
+
+            <Link
+              href="/vestidos/festa"
+              onClick={() => setOpen(false)}
+              className="hover:text-[#C6A75E] transition duration-500"
+            >
+              FESTA
+            </Link>
+
+            <Link
+              href="/vestidos/daminhas"
+              onClick={() => setOpen(false)}
+              className="hover:text-[#C6A75E] transition duration-500"
+            >
+              DAMINHAS
+            </Link>
+
+            {/* DIVISÓRIA */}
+            <div className="w-16 h-px bg-white/20 mt-6 mb-2"></div>
+
+            {/* SOCIAL MOBILE */}
+            <div className="flex space-x-10 pt-4">
+              <a
+                href="https://wa.me/5562993347287?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20da%20Venute%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="hover:text-[#25D366] transition"
+              >
+                <MessageCircle size={26} strokeWidth={1.5} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/venute_locacoes"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="hover:text-[#C6A75E] transition"
+              >
+                <Instagram size={26} strokeWidth={1.5} />
+              </a>
+            </div>
+
           </div>
         </div>
       )}
