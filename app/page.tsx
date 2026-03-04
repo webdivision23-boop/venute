@@ -57,10 +57,10 @@ export default function Home() {
     link: "/vestidos/casamento",
   },
   {
-    image: dresses[5]?.image,
+    image: dresses[26]?.image,
     title: "MADRINHAS",
     text: "Aceita viver esse momento inesquecível ao meu lado?",
-    link: "/vestidos/madrinhas",
+    link: "/vestidos/madrinhas/madrinhas2",
   },
   {
     image: dresses[9]?.image,
